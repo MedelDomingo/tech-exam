@@ -1,0 +1,68 @@
+@use "../styles/abstracts/variables" as *;
+
+.get-the-set__wrapper {
+  background: $bg-white-pure;
+  border-bottom: 2px solid rgba(46, 48, 46, 1);
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .inner-content__wrapper {
+    padding-bottom: 30px;
+    @media (min-width: 1200px) {
+      width: 36%;
+    }
+    p.start-text {
+      color: #2e302e;
+      background-color: $bg-yellow;
+      border-radius: 28.5px;
+      padding: 10px;
+      max-width: 324px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 40px;
+      @media (min-width: 576px) {
+        font-size: 50px;
+      }
+    }
+    ul.content-list {
+      padding: 30px 0 0 0;
+      li {
+        padding-bottom: 24px;
+        p {
+          margin: 0;
+        }
+      }
+    }
+    .btn-add-cart {
+      width: 100%;
+      max-width: 380px;
+      font-size: 14px;
+      @media (min-width: 768px) {
+        padding: 9px;
+        font-size: 18px;
+      }
+      span {
+        margin-left: 26px;
+        font-size: 14px;
+        color: gray;
+        text-decoration: line-through;
+        @media (min-width: 768px) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .img-wrapper {
+    max-width: 606.97px;
+    margin: 30px auto;
+    display: none;
+    @media (min-width: 1200px) {
+      display: block;
+      width: 64%;
+      margin: 0 0 0 auto;
+    }
+  }
+}

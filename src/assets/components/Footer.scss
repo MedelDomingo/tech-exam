@@ -1,0 +1,35 @@
+@use "../styles/abstracts/variables" as *;
+
+.footer-section__wrapper {
+  background-color: $bg-black;
+  .content-wrapper {
+    .inner-contents__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      color: $bg-white-pure;
+      .contents {
+        flex-basis: 50%;
+        h3,
+        p {
+          color: $bg-white-pure;
+        }
+        h3 {
+          font-size: 21px;
+          letter-spacing: -0.3px;
+          font-weight: 700;
+        }
+      }
+      .footer-logo {
+        max-width: 42px;
+      }
+    }
+    form {
+      width: 100%;
+      input {
+        // width: 100%;
+        padding: 15px;
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@ import ResultsYouCanSee from "./assets/sections/ResultsYouCanSee";
 import OneMinuteRoutine from "./assets/sections/OneMinuteRoutine";
 import DailyBenefits from "./assets/sections/DailyBenefits";
 import GetTheSet from "./assets/sections/GetTheSet";
+import Footer from "./assets/components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <OneMinuteRoutine />
       <DailyBenefits />
       <GetTheSet />
+      <Footer />
     </>
   );
 }
