@@ -1,0 +1,110 @@
+@use "../styles/abstracts/variables" as *;
+
+.banner-section__wrapper {
+  background: $bg-black;
+  color: $bg-white-pure;
+  text-align: center;
+  .content-wrapper {
+    padding: 30px 15px;
+    @media (min-width: 1200px) {
+      display: flex;
+      text-align: left;
+      padding: 90px 15px 70px;
+      position: relative;
+    }
+    .banner-heading__wrapper {
+      max-width: 653px;
+      margin: auto;
+      @media (min-width: 1200px) {
+        margin: 0;
+      }
+      h1,
+      p {
+        color: $bg-white-offwhite;
+      }
+      h1 {
+        font-size: 40px;
+        @media (min-width: 576px) {
+          font-size: 64px;
+        }
+        @media (min-width: 1200px) {
+          letter-spacing: -1.07px;
+          line-height: 55px;
+        }
+      }
+      p {
+        padding: 19px 0;
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0;
+      }
+      .btn-banner {
+        background-color: $bg-yellow;
+        color: $bg-black;
+        margin: auto;
+        max-width: 314px;
+        width: 100%;
+        @media (min-width: 1200px) {
+          margin: 0;
+        }
+      }
+    }
+    .rating {
+      max-width: 331px;
+      margin: 30px auto;
+      @media (min-width: 1200px) {
+        margin: 173px 0 0;
+      }
+      .star-wrapper {
+        max-width: 116px;
+        margin: auto;
+        @media (min-width: 1200px) {
+          margin: 0;
+        }
+      }
+      .testimonial__wrapper {
+        p {
+          @media (min-width: 1200px) {
+            margin: 0;
+            padding: 15px 0;
+          }
+        }
+        .name-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @media (min-width: 1200px) {
+            justify-content: unset;
+          }
+          span {
+            width: 39px;
+            height: 39px;
+            border: 2px solid #000;
+            text-align: center;
+            font-size: 14px;
+            vertical-align: middle;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $bg-white-pure;
+            color: $bg-black-pure;
+            font-weight: bold;
+            border-radius: 100%;
+            margin-right: 11px;
+          }
+        }
+      }
+    }
+    .banner-img__wrapper {
+      max-width: 611px;
+      margin: auto;
+      @media (min-width: 1200px) {
+        position: absolute;
+        right: 44px;
+        margin: 0;
+        top: 55px;
+      }
+    }
+  }
+}

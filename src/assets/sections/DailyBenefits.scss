@@ -1,0 +1,59 @@
+@use "../styles/abstracts/variables" as *;
+
+.daily-benefits__wrapper {
+  text-align: center;
+  background-color: $bg-white-coolwhite;
+  @media (min-width: 1200px) {
+    text-align: left;
+  }
+  .content-wrapper {
+    h2 {
+      font-size: 30px;
+      @media (min-width: 768px) {
+        font-size: 50px;
+        max-width: 522px;
+        margin: auto;
+        @media (min-width: 1200px) {
+          margin: 0;
+        }
+      }
+    }
+    p {
+    }
+    ul.card-list__wrapper {
+      padding: 0;
+      list-style: none;
+      max-width: 332.6px;
+      margin: 50px auto;
+      @media (min-width: 768px) {
+        max-width: 100%;
+        display: flex;
+        gap: 10px;
+        justify-content: space-evenly;
+        @media (min-width: 992px) {
+          gap: 40px;
+          @media (min-width: 1200px) {
+            gap: 86px;
+          }
+        }
+      }
+      li {
+        .benefit-details {
+          padding: 15px 0;
+          @media (min-width: 769px) {
+            text-align: left;
+          }
+          h4 {
+            font-size: 18px;
+            @media (min-width: 992px) {
+              font-size: 23px;
+            }
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@use "../styles/abstracts/variables" as *;
+
+.how-it-works__wrapper {
+  background-color: $bg-white-coolwhite;
+  .content-wrapper {
+    text-align: center;
+    // max-width: 332.6px;
+    h2 {
+      font-size: 40px;
+      @media (min-width: 576px) {
+        font-size: 80px;
+      }
+      @media (min-width: 768px) {
+        line-height: 72px;
+      }
+    }
+    .clock-img {
+      max-width: 110px;
+      margin: 20px 0;
+      @media (min-width: 992px) {
+        margin: 45px 0;
+      }
+    }
+    ul {
+      padding: 0;
+      max-width: 332.6px;
+      margin: 50px auto;
+      @media (min-width: 768px) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        gap: 20px;
+        margin-top: 90px;
+        max-width: 100%;
+        margin: 90px 0 auto;
+        @media (min-width: 1200px) {
+          gap: 134px;
+        }
+      }
+      li {
+        list-style: none;
+        position: relative;
+        margin-bottom: 30px;
+        @media (min-width: 768px) {
+          width: 100%;
+          margin: 0;
+        }
+        .step-badge {
+          width: 50px;
+          height: 50px;
+          background-color: $bg-white-pure;
+          border-radius: 50%;
+          font-family: "Inter", sans-serif;
+          font-size: 26px;
+          font-weight: 900;
+          line-height: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1.5px solid $bg-black-pure;
+          left: 26px;
+          top: 26px;
+          position: absolute;
+        }
+        .product-wrapper {
+          display: flex;
+          align-items: center;
+          text-align: left;
+          padding-top: 26px;
+          img {
+            max-width: 87px;
+            margin-right: 10px;
+          }
+          p {
+            font-size: 18px;
+            @media (min-width: 768px) {
+              margin: 0;
+              font-size: 12px;
+              @media (min-width: 992px) {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

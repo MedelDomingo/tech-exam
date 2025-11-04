@@ -1,0 +1,22 @@
+@use "../styles/abstracts/variables" as *;
+
+.results-ycs__wrapper {
+  text-align: center;
+  background-color: $bg-white-coolwhite;
+  border-top: 1.5px solid rgb(70 79 110 / 20%);
+  .content-wrapper {
+    @media (min-width: 1200px) {
+      padding: 59px 15px;
+    }
+    h2 {
+      font-size: 40px;
+      @media (min-width: 768px) {
+        font-size: 50px;
+      }
+    }
+    p {
+      max-width: 702px;
+      margin: 26px auto;
+    }
+  }
+}
