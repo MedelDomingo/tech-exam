@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -10,20 +10,13 @@ import backgroundImage from "../images/one-minute.jpg";
 import checkedMark from "../images/check.png";
 
 const slideSettings = {
-  slidesToShow: 5,
+  slidesToShow: 4,
   slidesToScroll: 1,
   infinite: true,
   autoplay: true,
   autoplaySpeed: 2000,
+  initialSlide: 0,
   responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-      },
-    },
     {
       breakpoint: 600,
       settings: {
