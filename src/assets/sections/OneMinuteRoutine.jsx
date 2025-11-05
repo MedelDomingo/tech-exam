@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -9,32 +9,48 @@ import "./OneMinuteRoutine.scss";
 import backgroundImage from "../images/one-minute.jpg";
 import checkedMark from "../images/check.png";
 
-const slideSettings = {
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  infinite: true,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  initialSlide: 0,
-  responsive: [
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
-
 const OneMinuteRoutine = () => {
+  // Use state to manage the current slidesToShow value
+  const [slidesToShowSetting, setSlidesToShowSetting] = useState(1);
+
+  const determineSlidesToShow = () => {
+    if (window.innerWidth >= 1200) {
+      return 4;
+    }
+    if (window.innerWidth >= 768) {
+      return 2;
+    }
+    if (window.innerWidth >= 576) {
+      return 2;
+    }
+    return 1; // Default Value for mobile
+  };
+
+  useEffect(() => {
+    // Set the initial value on mount
+    setSlidesToShowSetting(determineSlidesToShow());
+
+    // Add event listener for window resize
+    const handleResize = () => {
+      setSlidesToShowSetting(determineSlidesToShow());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const slideSettings = {
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    slidesToShow: slidesToShowSetting,
+    slidesToScroll: 1,
+    mobileFirst: true,
+  };
   return (
     <>
       <section
