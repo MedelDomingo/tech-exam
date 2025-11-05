@@ -15,6 +15,7 @@ const slideSettings = {
   infinite: true,
   autoplay: true,
   autoplaySpeed: 2000,
+  arrows: false,
   initialSlide: 0,
   responsive: [
     {
