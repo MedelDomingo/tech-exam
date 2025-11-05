@@ -1,0 +1,104 @@
+@use "../styles/abstracts/variables" as *;
+
+.wofs__wrapper {
+  text-align: center;
+  .content-wrapper {
+    @media (min-width: 1200px) {
+      padding-bottom: 60px;
+    }
+  }
+  h2 {
+    margin-bottom: 30px;
+    font-size: 40px;
+    @media (min-width: 768px) {
+      font-size: 50px;
+      margin-bottom: 43px;
+    }
+  }
+  ul.cards-wrapper {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    max-width: 332px;
+    margin: auto;
+    @media (min-width: 576px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: unset;
+      margin: unset;
+      @media (min-width: 1200px) {
+        flex-wrap: unset;
+        gap: 25px;
+      }
+    }
+    li {
+      margin-bottom: 30px;
+      @media (min-width: 576px) {
+        flex-basis: 49%;
+        margin: 0;
+        @media (min-width: 1200px) {
+          flex-basis: unset;
+        }
+      }
+      .list-inner__wrapper {
+        position: relative;
+        .img-wrapper {
+          position: relative;
+          svg {
+            width: 18px;
+            height: 18px;
+            background: #fff;
+            padding: 8px;
+            border-radius: 50%;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+          }
+          .play-btn {
+            display: block;
+            position: absolute;
+            top: 38%;
+            margin: auto;
+            left: 0;
+            right: 0;
+            max-width: 68px;
+          }
+        }
+      }
+      .vid-details__wrapper {
+        background-color: $bg-white-pure;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        border-radius: 20px;
+        text-align: left;
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        left: 0;
+        margin: 10px;
+        align-items: center;
+        .text-content {
+          .rating {
+            max-width: 55.52px;
+          }
+          h4 {
+            color: rgba(0, 38, 87, 1);
+            font-weight: 600;
+            font-size: 15px;
+          }
+          p {
+            margin: 0;
+            color: #434c6c;
+            font-size: 14px;
+          }
+        }
+        .wofs-add-btn {
+          font-size: 18px;
+          max-width: 92px;
+        }
+      }
+    }
+  }
+}

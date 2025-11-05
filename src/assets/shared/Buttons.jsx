@@ -12,7 +12,8 @@ const Buttons = (props) => {
       aria-label={props.label}
     >
       {props.text}
-      <span>{props.subtext && `${props.spantext}`}</span>
+
+      <span>{props.spanText && `${props.spanText}`}</span>
     </a>
   );
 };

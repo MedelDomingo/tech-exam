@@ -1,3 +1,4 @@
+@use "./assets/sections/GetTheSet.scss";
 @use "./assets//styles/abstracts/variables" as *;
 
 html,
@@ -15,6 +16,8 @@ p {
   color: $bg-black-text;
   font-size: 14px;
   font-weight: 400;
+  font-family: "Roboto Mono", monospace;
+  font-weight: normal;
   @media (min-width: 768px) {
     font-size: 18px;
   }
@@ -36,6 +39,8 @@ h6 {
 }
 a {
   cursor: pointer;
+  font-family: "Roboto Mono", monospace;
+  font-weight: normal;
   &.btn-primary {
     transition: ease all 0.3s;
     &:hover {
@@ -64,7 +69,25 @@ ul.content-list {
     }
     img {
       max-width: 22px;
-      margin-right: 5px;
+      margin-right: 13px;
     }
   }
+}
+button,
+input {
+  font-family: "Roboto Mono", monospace;
+}
+button {
+  cursor: pointer;
+  transition: ease all 0.3s;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+input {
+  width: 100%;
+  padding: 0;
+  outline: none;
+  margin: 0;
+  border: none;
 }
