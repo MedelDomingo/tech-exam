@@ -1,9 +1,7 @@
 @use "../styles/abstracts/variables" as *;
 
-.two-col__wrapper.get-the-set__wrapper {
-  background: $bg-white-pure;
-  border-bottom: 2px solid rgba(46, 48, 46, 1);
-  border-top: 2px solid rgba(46, 48, 46, 1);
+.two-col__wrapper {
+  background: $bg-white-coolwhite;
   .content-wrapper {
     @media (min-width: 768px) {
       display: flex;
@@ -13,16 +11,16 @@
   }
   .inner-content__wrapper {
     padding-bottom: 30px;
+    max-width: 325px;
+    margin: auto;
     @media (min-width: 1200px) {
       width: 36%;
+      max-width: unset;
+      margin: unset;
     }
     p.start-text {
       color: #2e302e;
-      background-color: $bg-yellow;
-      border-radius: 28.5px;
-      padding: 10px;
       max-width: 324px;
-      text-align: center;
     }
     h2 {
       font-size: 40px;
@@ -34,9 +32,19 @@
     ul.content-list {
       padding: 30px 0 0 0;
       li {
-        border-bottom: 0;
+        padding-bottom: 24px;
+        border-bottom: 2px solid rgb(29 60 52 / 10%);
+        padding: 5px 0;
+        margin: 5px 0;
+        &:last-child {
+          border-bottom: 0;
+        }
         p {
           margin: 0;
+          font-size: 14px;
+          @media (min-width: 1200px) {
+            font-size: 18px;
+          }
         }
       }
     }
@@ -44,6 +52,7 @@
       width: 100%;
       max-width: 380px;
       font-size: 14px;
+      margin-top: 33px;
       @media (min-width: 768px) {
         padding: 9px;
         font-size: 18px;

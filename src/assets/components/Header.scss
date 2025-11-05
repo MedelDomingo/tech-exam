@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: $bg-white-pure;
   @media (min-width: 768px) {
     padding: 5px 0;
   }
@@ -73,9 +74,14 @@
       @media (min-width: 425px) {
         display: flex;
         margin-right: 15px;
-        font-size: 18px;
+        font-size: 14px;
+        width: 134px;
+        height: 42px;
         @media (min-width: 768px) {
+          font-size: 18px;
           margin-right: 30px;
+          width: 201px;
+          height: 46px;
         }
       }
     }
